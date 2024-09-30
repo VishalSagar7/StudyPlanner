@@ -6,7 +6,7 @@ function App() {
   const [hours, setHours] = useState('');
   const [tasks, setTasks] = useState([]);
 
-  // Add new task
+
   const handleAddTask = () => {
     if (subject && hours) {
       const newTask = { subject, hours: parseInt(hours) };
@@ -16,7 +16,7 @@ function App() {
     }
   };
 
-  // Increment hours
+ 
   const handleIncrement = (index) => {
     const updatedTasks = tasks.map((task, i) =>
       i === index ? { ...task, hours: task.hours + 1 } : task
@@ -24,7 +24,7 @@ function App() {
     setTasks(updatedTasks);
   };
 
-  // Decrement hours
+
   const handleDecrement = (index) => {
     const updatedTasks = tasks.map((task, i) =>
       i === index && task.hours > 0 ? { ...task, hours: task.hours - 1 } : task
